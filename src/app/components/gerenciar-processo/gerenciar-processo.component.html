@@ -1,1 +1,28 @@
-<p>gerenciar-processo works!</p>
+<mat-card class="card-adicionar-processo">
+    <mat-card-title class="titulo">Adicionar Processo</mat-card-title>
+
+    <mat-form-field appearance="fill" class="field">
+        <input matInput placeholder="Número do Processo" [(ngModel)]="processo.numero">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <input matInput placeholder="Juízo" [(ngModel)]="processo.vara">
+    </mat-form-field>
+    <button class="adicionar" mat-button (click)="adicionarProcesso()">Adicionar</button>
+</mat-card>
+
+<mat-card class="card-adicionar-processo">
+    <mat-card-title class="titulo">Atualizar Processo</mat-card-title>
+    <mat-form-field appearance="fill">
+        <input matInput placeholder="Nº Atual do Processo" [(ngModel)]="processoEmAtualizacao.numero">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <input matInput placeholder="Juízo" [(ngModel)]="processoEmAtualizacao.vara">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <input matInput placeholder="Mandado de Prisão" [(ngModel)]="processoEmAtualizacao.mdPrisao">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <input matInput placeholder="Validade Md de Prisão" [(ngModel)]="processoEmAtualizacao.valMdPrisao">
+    </mat-form-field>
+    <button class="adicionar" mat-button (click)="atualizarProcesso()">Atualizar</button>
+</mat-card>

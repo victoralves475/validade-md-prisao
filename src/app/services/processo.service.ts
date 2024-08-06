@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Processo } from '../models/processo.model';
+import { PROCESSOS } from '../shared/PROCESSOS';
 
 @Injectable({
     providedIn: 'root'
@@ -9,7 +10,10 @@ export class ProcessoService {
     private processos: Processo[] = [];
 
     constructor() {
+        this.processos = PROCESSOS;
     }
+
+    // Remove the duplicate function implementation
 
     //Utils
     buscarIndice(numero: string): number {

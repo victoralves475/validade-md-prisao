@@ -7,7 +7,11 @@ export class Processo {
         public valMdPrisao?: string
     ) { }
 
-    isMdPrisaoAtivo(): boolean {
+    toString(): string {
+        return `Processo Nº ${this.numero}, Vara: ${this.vara}, Mandado de Prisão: ${this.mdPrisao ? 'Sim' : 'Não'}, Validade: ${this.valMdPrisao || 'N/A'}`;
+    }
+
+    /*** isMdPrisaoAtivo(): boolean {
         if (!this.mdPrisao || !this.valMdPrisao) {
             return false;
         } else {
@@ -17,10 +21,6 @@ export class Processo {
                     !isNaN(dataValidade.getTime()) &&
                     dataAtual <= dataValidade;
         }
-    }
-
-    toString(): string {
-        return `Processo Nº ${this.numero}, Vara: ${this.vara}, Mandado de Prisão: ${this.mdPrisao ? 'Sim' : 'Não'}, Validade: ${this.valMdPrisao}`;
-    }
+    } ***/
 
 }

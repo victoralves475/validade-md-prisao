@@ -1,0 +1,17 @@
+@for (processo of processos; track $index) {
+<mat-card class="card-listagem">
+    <mat-card-header class="mat-card-header">
+        <div class="titulo">
+        <mat-card-title>{{ processo.numero }}</mat-card-title>
+        <mat-card-subtitle>{{ processo.vara }}</mat-card-subtitle>
+        </div>
+        <div class="icones">
+        <mat-icon aria-hidden="false" aria-label="Excluir" fontIcon="delete" (click)="deletarProcesso(processo.numero)" ></mat-icon>
+        </div>
+
+    </mat-card-header>
+    <mat-card-content>
+        <p>Mandado de Prisão: {{ processo.mdPrisao ? 'Sim' : 'Não' }}</p>
+        <p>Validade: {{ processo.valMdPrisao || 'N/A' }} </p>
+    </mat-card-content>
+</mat-card>}

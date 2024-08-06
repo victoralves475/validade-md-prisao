@@ -1,0 +1,25 @@
+.card-adicionar-processo {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.card-adicionar-processo:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.titulo {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 10px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
